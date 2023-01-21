@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-12">
+        <content-with-table>
+            <ng-container toolbar>
+                <div class="row">
+                    <h1>Hola mundo</h1>
+                </div>
+            </ng-container>
+            <ng-container table-content matSort>
+                <ng-container matColumnDef="dni">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header="dni">DNI</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{ element.dni }} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="nombres">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Nombres</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{ element.nombres }} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="apellidos">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Apellidos</mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{ element.apellidos}} </mat-cell>
+                </ng-container>
+            </ng-container>
+        </content-with-table>
+    </div>
+</div>
