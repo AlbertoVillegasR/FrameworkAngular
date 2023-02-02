@@ -1,32 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+    box-sizing: border-box;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,body {
+    height: 100%;
+    font-family: Poppins, Helvetica, "sans-serif";
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
 
 // .mt-5{
 //     margin-top: 5px;
 // }
 
-*{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
-}
-
-.row{
+.row {
     margin: 15px;
 }
 
-.table{
+.table {
     margin: 15px !important;
 }
 
-.mt-1{
-
+.mt-1 {
+    margin-top: 1px;
 }
 
-.mx-5{
+.mx-5 {
     margin: 0px 5px;
 }
 
-.my-5{
+.my-5 {
     margin: 5 0;
 }
+
+.ml-5{
+    margin-left: 15px !important;
+}
+
+.mat-header-row  {
+    border-radius: 20px 20px 0 0;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 15px;
+    border-bottom: 1px solid #ebedf3;
+}
+
+.mat-header-cell {
+    color: rgba(0, 0, 0, .54);
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ebedf3;
+    padding: 0px 15px;
+}
+
+.text-align-center {
+    justify-content: center !important;
+}
+
+.text-align-justify {
+    justify-content: justify !important;
+}
+
+.text-align-end {
+    justify-content: end !important;
+}
+
+.text-align-right {
+    justify-content: right !important;
+}
+
+// .mat-cell {
+//     border-bottom: 1px solid #ebedf3;
+// }
+
+.input-text{
+    border-radius: 10px;
+}
+
+
+

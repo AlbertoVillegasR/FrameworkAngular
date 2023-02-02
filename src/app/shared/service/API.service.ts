@@ -9,11 +9,11 @@ import { ResponseModel } from "../model/response.model";
 export class APISERVICE {
     constructor(private http: HttpClient) { }
 
-    public async post<T>(path: string, obj?: any){
+    public async post<T>(path: string, obj?: any) {
         let resul: ResponseModel<T> = new ResponseModel();
         path = `${environment.urlApi}/${path}`
         try {
-            let result :any  = await this.http.post(path, obj).toPromise();         
+            let result : any = await this.http.post(path, obj).toPromise();
             resul = result;
         } catch (error) {
             resul.status = 0;

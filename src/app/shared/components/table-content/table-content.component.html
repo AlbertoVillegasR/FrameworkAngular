@@ -1,14 +1,17 @@
-<ng-content select="[toolbar]"></ng-content>
-<mat-table class="table" [dataSource]="dataSource">
-    <ng-content select="[table-content]"></ng-content>
-    <!-- <ng-container matColumnDef="hola1">
-        <mat-header-cell *matHeaderCellDef>Fecha de Carga</mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{ element.hola1 }} </mat-cell>
+<div>
+    <ng-container>
+        <div class="row me-5 ">
+            <input type="text" class="input-text col-md-4" [(ngModel)]="filterText"
+                (ngModelChange)="setFilterToSearch()" placeholder="Buscar en todas las columnas">
+            <ng-content select="[toolbar]"></ng-content>
+        </div>
     </ng-container>
-    <ng-container matColumnDef="hola2">
-        <mat-header-cell *matHeaderCellDef>Fecha de Carga</mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{ element.hola2}} </mat-cell>
-    </ng-container> -->
-    <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: columns"></mat-row>
-</mat-table>
+
+
+
+    <mat-table class="table" [dataSource]="dataSource">
+        <ng-content select="[table-content]"></ng-content>
+        <mat-header-row *matHeaderRowDef="configComponent.columns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: configComponent.columns"></mat-row>
+    </mat-table>
+</div>

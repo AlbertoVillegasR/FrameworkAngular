@@ -4,6 +4,7 @@ import { TableContentComponent } from './components/table-content/table-content.
 import { MatTableModule } from '@angular/material/table'
 import { APISERVICE } from './service/API.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 // // import { MatSortHeader, MatSortModule } from '@angular/material/sort';
 
 
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     MatTableModule,
+    FormsModule
     // MatSortModule,
     // MatTableModule, 
   ],

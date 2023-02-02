@@ -12,14 +12,10 @@ export class PersonaService {
   constructor(private http: HttpClient,private api: APISERVICE) { }
 
   async lista(): Promise<ResponseModel<any>> {
-    console.log("iniciando service");
-    
-    return this.api.post("common/clientes/listarPersonas");
+    return this.api.post<any>("common/clientes/listarPersonas");
   }
 
   async lista2(){
-    console.log("iniciando");
-    
     this.http.post("http://localhost:3100/common/clientes/listarPersonas",null).subscribe(()=>{
     });
   }
