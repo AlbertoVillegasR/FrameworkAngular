@@ -1,0 +1,17 @@
+<content-with-form>
+    <ng-container contentForm>
+        <div class="row">
+            <widget-input-text label="Nombres" [(ngModel)]="person.name" name="hola" class="col-md-12">
+            </widget-input-text>
+            <widget-input-text label="Primer Apellido" [(ngModel)]="person.first_lastname" name="hola_1" class="col-md-12">
+            </widget-input-text>
+            <widget-input-text label="Segundo Apellido" [(ngModel)]="person.second_lastname" name="hola_2" class="col-md-12" [required]="false">
+            </widget-input-text>
+            <widget-input-text label="birthdate" [(ngModel)]="person.brithdate" name="hola_3" class="col-md-12">
+            </widget-input-text>
+            <widget-input-text label="Nro Documento" [(ngModel)]="person.nro_doc" name="hola_3" class="col-md-12">
+            </widget-input-text>
+            <button class="btn btn-danger col-auto" (click)="end()">Hola</button>
+        </div>
+    </ng-container>
+</content-with-form>

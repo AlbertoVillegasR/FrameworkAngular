@@ -1,0 +1,16 @@
+<div id="layout" class="w-100 h-100" (window:resize)="onResize($event)">
+    <div id="aside-dynamic" [class]="small ?'collapse float-start h-100 bg-primary' : 'float-start h-100 bg-primary'">
+        <app-aside-dynamic></app-aside-dynamic>
+    </div>
+    <div id="aside-dynamic-mobile" class="d-none">
+        <nav class="navbar mx-3">
+            <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#aside-dynamic">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <div id="body-outlet" class="h-100 bg-gray">
+        <router-outlet></router-outlet>
+    </div>
+</div>

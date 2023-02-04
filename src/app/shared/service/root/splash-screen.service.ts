@@ -15,13 +15,9 @@ export class SplashScreenService {
     this.el = element;
   }
   
-  show(message?: string) {
-    
-    console.log(this.el);
+  show(message?: string) {    
     this.isShow = true;
-
     this.setMessage(message || 'Cargando');
-
     const player = this.animationBuilder
       .build([style({ opacity: '0' }), animate(100, style({ opacity: '0.9' }))])
       .create(this.el.nativeElement);

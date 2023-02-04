@@ -2,48 +2,35 @@
 * {
     // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.div_scroll {
+    overflow: auto !important;
 }
 
 html,body {
-    height: 100%;
+    height: 100vh !important;
+    width: 100vw !important;
     font-family: Poppins, Helvetica, "sans-serif";
     font-size: 15px;
     font-weight: 400;
+    overflow: hidden;
 }
 
-
-
-// .mt-5{
-//     margin-top: 5px;
-// }
-
-.row {
-    margin: 15px;
-}
-
-.table {
-    margin: 15px !important;
-}
-
-.mt-1 {
-    margin-top: 1px;
-}
-
-.mx-5 {
-    margin: 0px 5px;
-}
-
-.my-5 {
-    margin: 5 0;
-}
-
-.ml-5{
-    margin-left: 15px !important;
+.mat-table {
+    background: transparent;
 }
 
 .mat-header-row  {
     border-radius: 20px 20px 0 0;
-    background-color: #f8f8f8;
+    background-color: #f2f2f2;
     font-size: 12px;
     font-weight: 600;
     padding: 0px 15px;
@@ -59,29 +46,51 @@ html,body {
     padding: 0px 15px;
 }
 
-.text-align-center {
-    justify-content: center !important;
-}
-
-.text-align-justify {
-    justify-content: justify !important;
-}
-
-.text-align-end {
-    justify-content: end !important;
-}
-
-.text-align-right {
-    justify-content: right !important;
-}
-
-// .mat-cell {
-//     border-bottom: 1px solid #ebedf3;
+// .input-text{
+//     border-radius: 10px;
 // }
 
-.input-text{
+.form-group{
+    margin-bottom: 1.5rem;
+}
+
+#search{
+    border: 1px solid gray;
     border-radius: 10px;
 }
 
+.card .card-header{
+    background-color: #99999961;
+    border-radius: 25px 25px 0 0 !important;
+}
+
+.card {
+    border-radius: 25px !important;
+}
+
+.card .card-header .card-label small{
+    padding: 5px;
+    font-size: small;
+    border: transparent;
+    border-radius: 10px;
+    background-color: rgba(10,150,10, 0.5)
+}
+
+@media(max-width: 500px){
+
+    .card .card-label small{
+        margin-top: 5px;
+        float: right;
+        text-align: justify;
+    }
+}
+
+body.swal2-height-auto{
+    height: 100% !important;
+}
 
 
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

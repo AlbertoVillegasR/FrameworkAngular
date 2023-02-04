@@ -1,0 +1,58 @@
+<div class="row mx-0">
+    <div class="full col-md-12 my-3">
+        <div class="card border-0">
+            <div class="card-header">
+                <span class="svg-icon svg-icon-white svg-icon-3x mr-2">
+                    <!-- <widget-svg-icon [icon]="configComponent.icon"></widget-svg-icon> -->
+                </span>
+                <h3 class="card-label">
+                    {{ configComponent.title }}
+                    <small>{{ configComponent.description }}</small>
+                </h3>
+            </div>
+            <div class="">
+                <ng-content *ngIf="selection.selected.length > 0" select="[toolbar-table]"></ng-content>
+
+                <button type="button" *ngIf="selection.selected.length > 0 && multipleRemove"
+                    class="btn btn-pill btn-light-danger mr-2">
+                    <i class="fas fa-trash-alt mr-2"></i>Eliminar <b>({{ selection.selected.length }})</b></button>
+            </div>
+            <div class="card-body">
+                <ng-container>
+                    <div class="row mx-2">
+                        <input id="search" type="text" class="col-md-4" [(ngModel)]="filterText"
+                            (ngModelChange)="setFilterToSearch()" placeholder="Buscar en todas las columnas">
+                        <div class="col"></div>
+                        <div class="col d-flex justify-content-end mt-2">
+                            <ng-content select="[toolbar]"></ng-content>
+                        </div>
+                    </div>
+                </ng-container>
+                <div class="div_scoll mt-5">
+                    <mat-table class="table" [dataSource]="dataSource">
+                        <ng-content select="[table-content]"></ng-content>
+                        <mat-header-row *matHeaderRowDef="configComponent.columns"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: configComponent.columns"></mat-row>
+                    </mat-table>
+
+                    <div class="mat-table-message" *ngIf="!dataSource.data.length">
+                        <div class='no_coment_icono'>
+                            <div>
+                                <div><i class='fas fa-th'></i></div>
+                                <div class='no_coment_text'>Ningún dato disponible en esta tabla</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mat-table-message" *ngIf="loading">Espere...</div>
+
+                    <div class="mat-table-bottom border-top border-1" [hidden]="!withPaginator">
+                        <mat-spinner [diameter]="20" *ngIf="loading"></mat-spinner>
+                        <mat-paginator [pageSize]="10" [pageSizeOptions]="[10,50,100]" [showFirstLastButtons]="true">
+                        </mat-paginator>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

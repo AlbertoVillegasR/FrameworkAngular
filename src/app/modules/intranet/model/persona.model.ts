@@ -1,10 +1,14 @@
 export class PersonaModel {
-    nombres: string;
-    apellidos: string;
-    dni: number;
-    constructor(data: Partial<PersonaModel>) {
-        this.nombres = data?.nombres || null;
-        this.apellidos = data?.apellidos || null;
-        this.dni = data?.dni || null;
+    name: string;
+    first_lastname: string;
+    second_lastname: string;
+    brithdate: string;
+    nro_doc: string;
+    constructor(data?: Partial<PersonaModel>) {
+        this.name = data?.name || null;
+        this.first_lastname = data?.first_lastname || null;
+        this.second_lastname = data?.second_lastname || null;
+        this.brithdate = data?.brithdate || null;
+        this.nro_doc = data?.nro_doc || null;
     }
 }

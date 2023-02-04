@@ -1,0 +1,31 @@
+#aside-dynamic {
+  min-width: 200px;
+}
+
+#body-outlet {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0, 0.4);
+}
+
+#aside-dynamic:target {
+  display: flex !important;
+  
+}
+
+@media (max-width: 500px) {
+  /* #aside-dynamic {
+    display: none !important;
+  } */
+  #aside-dynamic-mobile {
+    display: block !important;
+  }
+}
+
+#div-btn-aside:active{
+    border: none;
+}
+
+.collapse .show{
+  transition: all 1s linear;
+}

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <content-with-table [configComponent]="configComponent">
+        <ng-container toolbar>
+            <widget-button label="Splash" (click)="splash()" name="btn_splash" class="btn btn-primary"></widget-button>
+        </ng-container>
+        <ng-container table-content matSort>
+            <ng-container matColumnDef="dni">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>DNI</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{ element.dni }} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="nombres">
+                <mat-header-cell *matHeaderCellDef mat-sort-header class="">Nombres</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{ element.nombres }} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="apellidos">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Apellidos</mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{ element.apellidos}} </mat-cell>
+            </ng-container>
+        </ng-container>
+    </content-with-table>
+
+</div>

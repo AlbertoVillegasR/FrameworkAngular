@@ -1,0 +1,7 @@
+<div class="form-group" [class]="wclass">
+    <label class="font-weight-bold">{{label}}:</label>
+    <input #inputNgModel="ngModel" input-safe [required]="required" [validations]="validations" [name]="name" 
+        [(ngModel)]="value">
+    <!-- <input #inputNgModel="ngModel" [required]="true" [name]="name" 
+        [(ngModel)]="value"> -->
+</div>

@@ -1,0 +1,34 @@
+.mat-table-message {
+    padding: 30px !important;
+    text-align: center;
+    font-weight: 500;
+}
+.no_coment_icono {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.no_coment_icono i {
+    font-size: 10rem;
+    color: #f0f0f0;
+
+    &.sm-icon {
+        font-size: 5rem;
+    }
+}
+
+.no_coment_icono .no_coment_text {
+    font-size: 1.3rem;
+    color: #cfcfcf;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    &.sm-text {
+        font-size: 1rem;
+    }
+}

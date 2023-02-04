@@ -1,0 +1,16 @@
+<div id="login" class="container-fluid bg-login">
+    <div class="row h-100 w-100 justify-content-center align-items-center">
+        <div id="div-login" class="col-md-3 row justify-content-center">
+            <content-with-form>
+                <ng-container contentForm>
+                    <widget-input-text label="Usuario" name="user" class="col-12 text-white"
+                        [(ngModel)]="user"></widget-input-text>
+                    <widget-input-text label="Contraseña" name="pass" class="col-12 text-white"
+                        [(ngModel)]="password"></widget-input-text>
+                    <widget-button class="btn btn-success col-auto float-center py-2 fw-bold" label="Ingresar"
+                        iconFA="fa-solid fa-lock-open" (click)="verifyUser()"></widget-button>
+                </ng-container>
+            </content-with-form>
+        </div>
+    </div>
+</div>

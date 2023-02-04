@@ -3,10 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/auth/auth.module').then((m) => m.AuthModule)
+  },
+  {
     path: '',
     loadChildren: () =>
-      import('./modules/intranet/intranet.module').then((m) => m.IntranetModule)
-  }
+      import('./modules/intranet/base/layout.module').then((m) => m.LayoutModule)
+  },
 ];
 
 @NgModule({
